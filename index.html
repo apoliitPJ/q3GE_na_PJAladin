@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="random"></p>
+    <p id="index"></p>
+    <p id="d"></p>
+   
+    <script>
+        var random = Math.floor(Math.random() * 1001);
+        document.getElementById("random").innerHTML = "<h1> Random number generated: " + random + "</h1>";
+       
+
+        if (random < 1000 && random > 99) {
+            var index1 = random.toString().charAt(0); 
+            index1 = parseInt(index1) * 100; 
+
+            var index2 = random.toString().charAt(1); 
+            index2 = parseInt(index2) * 10; 
+
+            var index3 = random.toString().charAt(2); 
+            index3 = parseInt(index3) * 1; 
+
+
+            document.getElementById("index").innerHTML = "<h1> Breakdown: <h2>" + index1 + " " + index2 + " " + index3 ;
+
+            var d = new Date(2024, 3, 34, 20, 34, 46);
+            document.getElementById("d").innerHTML = d;
+            
+            
+        }
+        else if (random < 100 && random > 9)
+        {
+            var index1 = random.toString().charAt(0); 
+            index1 = parseInt(index1) * 10; 
+
+            var index2 = random.toString().charAt(1); 
+            index2 = parseInt(index2) * 1; 
+
+            document.getElementById("index").innerHTML = "<h1> Breakdown: <h2>" + index1 + " " + index2  ;
+
+            var d = new Date(2024, 3, 34, 20, 34, 46);
+            document.getElementById("d").innerHTML = d;
+        }
+        else {
+            
+            document.getElementById("index").innerHTML = "<h1> Breakdown: <h2>" + random;
+            var d = new Date(2024, 3, 34, 20, 34, 46);
+            document.getElementById("d").innerHTML = d;
+        }
+    </script>
+</body>
+</html>
